@@ -1,0 +1,20 @@
+{
+    "name": "toriqahmads/fbwascrapper",
+    "description": "Whatsapp number scrapper from facebook groups",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Toriq Ahmad",
+            "email": "toriqahmads@gmail.com"
+        }
+    ],
+    "require": {
+        "voku/simple_html_dom": "4.3.3"
+    },
+    "autoload": {
+        "psr-4":
+        {
+            "FBWAScrapper\\": "src/"
+        }
+    }
+}
