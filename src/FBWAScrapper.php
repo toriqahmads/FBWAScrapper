@@ -25,12 +25,18 @@ class FBWAScrapper
 	{
 		$group = new Group($this->config['socks']);
 		$group->ParseGroupList();
-		return json_decode($group->GetGroupList());
+		return $group->GetGroupList();
 	}
 
-	public function GetPhones()
+	/*
+	*
+	*	@paramaters 1 is an array
+	*	@return is an object
+	*
+	*/
+	public function GetPhones($groupList)
 	{
-		$phones = new Phone($this->config['socks']);
+		$phones = new Phone($groupList, $this->config['socks']);
 		$phones->Phones();
 		return json_decode($phones->GetPhones());
 	}

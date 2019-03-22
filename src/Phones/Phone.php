@@ -16,12 +16,12 @@ class Phone
 	private $nextUrl;
 	private $groupLink;
 
-	public function __construct($socks = '')
+	public function __construct($groupList, $socks = '')
 	{
 		$this->curl = new Curl($socks);
 		$group = new Group;
 		$group->ParseGroupList();
-		$this->groups = json_decode($group->GetGroupList(), true);
+		$this->groups = $groupList;
 	}
 
 	public function VisitGroup()
